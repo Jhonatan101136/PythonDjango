@@ -1,0 +1,132 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block conteudo%}
+<div style="text-align: center;">
+    <h3>CONFIGURANDO O AMBIENTE PYTHON PARA FUNCIONAR JUNTO AO DJANGO</h3>
+</div>
+
+<div class="container" style="padding: 12px;">
+    <table>
+        <tr>
+            <td>
+                <div >
+                    <p>
+                     Dentre as três opções disponíveis, selecionaremos a “Create New Project” para criar o
+                        primeiro projeto do PyCharm. Ao fazer isso, seremos redirecionados para a seguinte tela:
+                    <p> <img src="{% static 'abrir.png'%}" style="width: 100%"> </p>
+
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div >
+                    <p>
+                    Criando projeto
+                     O primeiro passo para criarmos nosso projeto com Django é abrir o PyCharm. Ao fazer isso,
+                        veremos a seguinte tela:
+                    <p> <img src="{% static 'start.png'%}" style="width: 100%"> </p>
+                    <p>Aqui, definimos a localização do projeto e onde será armazenada a virtualenv do mesmo.</p>
+
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div >
+                    <p>
+                    epois de informar a localização do projeto e criar a virtualenv, podemos clicar em “Create”
+                        para que o PyCharm crie o diretório do projeto. No fim do processo, será exibida a seguinte tela:
+                    <p> <img src="{% static '38.png'%}" style="width: 100%"> </p>
+
+
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div >
+                    <p>
+                    Instalando o Django na sua na sua máquina.
+                    Acesse o temrinal do PyCharm e digite "pip instal django" e execute, após isso aguarde finalizar
+                    o processo de instalação
+                    <p> <img src="{% static 'pip.png'%}" style="width: 100%"> </p>
+
+                    Finalizando a instalação, vamos criar o projeto geral onde ficará as configurações de todo o site:
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div >
+                    <p>
+                    Seguindo a imagem acima, digite no terminal, o seguinte comando "django-admin startproject
+                    (o nome do seu projeto)" Nesse caso atribui o nome do projeto como TESTE
+                    <p> <img src="{% static 'pasta.png'%}" style="width: 100%"> </p>
+                    <center>
+                Basicamente sua estrutura de pastas ficará dessa maneira:
+                    </center>
+                    <font NONCE = "6"> settings.py: Arquivo para armazenar as configurações gerais do projeto, como os
+                        pacotes a serem utilizados, configurações de bancos de dados, localização de arquivos estáticos.
+                    </font> <br/> </font>
+                    <font NONCE = "6"> urls.py: Arquivo para armazenar as rotas que serão utilizadas no projeto.
+                        Este arquivo armazenará as rotas do projeto em geral, é recomendável que cada aplicação do
+                        projeto possua um arquivo de rotas específico.
+                    </font> <br/> </font>
+                    <font NONCE = "6"> wsgi.py: Interface simples e universal para troca de informações entre
+                        servidores web e aplicações criadas com Python.
+                    </font> <br/> </font>
+                </div>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <div >
+                    <p>
+                   Executando servidor Django
+                    Com o projeto criado, podemos executar seu servidor de desenvolvimento para verificar se tudo está
+                        conforme planejado.
+                        Para isso, ainda no terminal do PyCharm, utilizamos o seguinte comando no terminal:
+                    "python manage.py runserver"
+                    <p> <img src="{% static 'executando servidor.png'%}" style="width: 100%"> </p>
+
+                    Ao executar o comando acima, o servidor do Django será inicializado e poderemos acessá-lo através
+                    da rota http://127.0.0.1:8000, conforme é retornado no terminal:
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div >
+                    <p>
+                   Ao executar a rota citada acima em um navegador, teremos a seguinte página como resposta:
+                    <p> <img src="{% static 'server.png'%}" style="width: 100%"> </p>
+
+                  Está página indica que a instalação e configuração foi feita corretamente e já podemos começar a
+                    desenvolver nossa primeira aplicação web.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="container" style="background-color: MediumSeaGreen;; padding: 10px;">
+                    <p>
+                   Como último passo falando sobre a instalação e configuração de ambiente, vamos criar nosso primeiro
+                    APP executando no terminal o seguinte código:  python manage.py startapp (nome do seu app).
+                    Execute o código e atualize as páginas para que seja carregado automaticamente.
+
+                </div>
+            </td>
+        </tr>
+
+
+
+
+    </table>
+</div>
+{%endblock%}

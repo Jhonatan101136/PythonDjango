@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+{%load static%}
+
+
+{%block conteudo%}
+<p>
+
+   <font size = "6"> Centro Universitário JW</font> <br/> </font>
+    Curso de engenharia de software </p>
+<p> <img src="{% static 'img/imagem.jpg'%}" style="width: 100%"> </p>
+<body>
+<table class="container">
+    <thead>
+    <tr>
+        <th>
+            <center>
+                Informações sobre o curso
+            </center>
+
+        </th>
+        <th>
+            Duração
+        </th>
+        <th>
+            Carga horária
+        </th>
+        <th>
+            Período
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+       <td>
+         Programação WEB
+        </td>
+         <td>
+          Seis meses
+        </td>
+         <td>
+          80 horas
+        </td>
+         <td>
+          6° Período
+        </td>
+    </tr>
+
+
+
+
+
+
+{%endblock%}
